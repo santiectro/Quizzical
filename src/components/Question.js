@@ -38,7 +38,7 @@ export default function Question(props) {
             
             
         }
-    }, [props.checked] )
+    }, [answers, props.checked, props.correct_answer] )
     
     
     return (
