@@ -25,10 +25,10 @@ export default function Question(props) {
             for (let i = 0; i < answers.length ; i++) {
                 
                 
-                if ( document.getElementById(`${answers[i]}`).value == props.correct_answer ) {
+                if ( document.getElementById(`${answers[i]}`).value === props.correct_answer ) {
 
                     document.getElementById(`${answers[i]}label`).style.backgroundColor = "#94D7A2"
-                } else if (  (document.getElementById(`${answers[i]}`).value != props.correct_answer) && document.getElementById(`${answers[i]}`).checked ) {
+                } else if (  (document.getElementById(`${answers[i]}`).value !== props.correct_answer) && document.getElementById(`${answers[i]}`).checked ) {
                     document.getElementById(`${answers[i]}label`).style.backgroundColor = "#F8BCBC"
                 } else {
                     document.getElementById(`${answers[i]}`).disabled = true

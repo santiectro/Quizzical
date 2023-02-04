@@ -7,7 +7,6 @@ export default function Quiz(props) {
     
     
     const [questions, setQuestions] = React.useState([])
-    const [answers, setAnswers] = React.useState([])
     const [finish, setFinish] = React.useState(false)
     const [startNewGame, setStartNewGame] = React.useState(false)
     const [correctAnswers, setCorrectAnswers] = React.useState(0)
@@ -73,7 +72,7 @@ export default function Quiz(props) {
             })
             
             for(let i = 0;  i < questions.length; i++) {
-                if(questions[i].selectedAnswer == questions[i].correct_answer) {
+                if(questions[i].selectedAnswer === questions[i].correct_answer) {
                     console.log("HI", correctAnswers)
                     setCorrectAnswers(prev => prev += 1)
                     console.log(correctAnswers)
