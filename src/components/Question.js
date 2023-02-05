@@ -2,6 +2,7 @@ import React from "react"
 
 export default function Question(props) {
     
+
     function decode(text) {
     var txt = document.createElement("textarea");
     txt.innerHTML = text;
@@ -38,7 +39,8 @@ export default function Question(props) {
             
             
         }
-    }, [answers, props.checked, props.correct_answer] )
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [props.checked] )
     
     
     return (
